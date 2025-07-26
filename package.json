@@ -1,0 +1,17 @@
+{
+  "name": "item-tests",
+  "version": "1.0.0",
+  "description": "Pruebas de ítemes.",
+  "main": "index.html",
+  "private": true,
+  "scripts": {
+    "start": "echo 'Abre item-ordena-imagenes.html en tu navegador.'",
+    "test": "echo 'Abre item-ordena-imagenes.html en tu navegador.' && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "ítemes"
+  ]
+}

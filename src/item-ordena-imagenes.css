@@ -1,0 +1,174 @@
+/* Botón fijo en la esquina inferior derecha */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    min-height: 200px;
+    width: 80%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable {
+    /* Base para tamaño uniforme: 150px x 150px */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* ¡Esto es clave para recortar y llenar el espacio! */
+    flex-shrink: 0;    /* Evita que se encojan en la fila si el espacio es limitado */
+    flex-grow: 0;      /* Evita que crezcan si hay espacio extra */
+    flex-basis: 150px; /* Tamaño base para la distribución Flexbox */
+
+    cursor: grab;
+    border: 2px solid transparent;
+    transition: border 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.draggable.dragging {
+    opacity: 0.7;
+    border: 2px solid #007bff;
+}
+
+#image-container.drag-over {
+    background-color: #e0f7fa;
+    border-color: #007bff;
+}
+
+button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.button-home {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  padding: 12px 24px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+.button-home:hover {
+  background: #1565c0;
+}
+
+/* --- Media Queries para Responsividad --- */
+
+/* Para pantallas medianas (tabletas y algunos portátiles) */
+@media (max-width: 992px) {
+    #image-container {
+        width: 90%;
+        gap: 15px;
+        padding: 15px;
+    }
+    .draggable {
+        /* Para 3 imágenes por fila, manteniendo el aspecto cuadrado */
+        width: calc(33.33% - 10px); /* Ajusta el ancho para 3 columnas y el gap de 15px */
+        height: unset; /* Resetea el alto fijo */
+        aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto cuadrada */
+        flex-basis: unset; /* Reinicia flex-basis para que se ajuste al width calc() */
+    }
+}
+
+/* Para pantallas pequeñas (móviles en landscape y tabletas pequeñas) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.6em;
+    }
+    #image-container {
+        width: 95%;
+        gap: 10px;
+        padding: 10px;
+    }
+    .draggable {
+        /* Para 2 imágenes por fila, manteniendo el aspecto cuadrado */
+        width: calc(50% - 5px); /* Ajusta el ancho para 2 columnas y el gap de 10px */
+        height: unset;
+        aspect-ratio: 1 / 1;
+        flex-basis: unset;
+    }
+    button {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en portrait) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.3em;
+    }
+    #image-container {
+        padding: 8px;
+        gap: 8px;
+    }
+    .draggable {
+        /* Para 1 imagen por fila, ocupando el ancho completo, pero con un max-width */
+        width: 100%;
+        max-width: 200px; /* Limita el tamaño máximo si el 100% es demasiado grande */
+        height: unset;
+        aspect-ratio: 1 / 1;
+        margin: 0 auto; /* Centra la imagen si tiene un max-width y no ocupa el 100% */
+        flex-basis: unset;
+    }
+}

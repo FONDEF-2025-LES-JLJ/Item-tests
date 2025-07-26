@@ -1,0 +1,30 @@
+{
+  "numberOfImagesToOrder": 5,
+  "imageGroups": {
+    "size1": [
+      "https://upload.wikimedia.org/wikipedia/commons/b/ba/Pencil_clipart.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/0/08/Orange-scissors.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Light_bulb_icon.svg/103px-Light_bulb_icon.svg.png"
+    ],
+    "size2": [
+      "https://upload.wikimedia.org/wikipedia/commons/6/6a/Basketball.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/68/Books-aj.svg_aj_ashton_01c.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg"
+    ],
+    "size3": [
+      "https://upload.wikimedia.org/wikipedia/commons/5/5b/Compact_stereo.svg",
+      "https://clipart-library.com/2023/450-4505102_pattern-of-book-bags-clipart-svg-royalty-free.png",
+      "https://upload.wikimedia.org/wikipedia/commons/7/76/Simple_cardboard_box.svg"
+    ],
+    "size4": [
+      "https://upload.wikimedia.org/wikipedia/commons/c/c1/Treasurchest.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Shopping_cart_with_food_clip_art_2.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Motorbike.svg"
+    ],
+    "size5": [
+      "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nissan_Patrol.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Citro%C3%ABn_C1.svg",
+      "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dump-truck.svg"
+    ]
+  }
+}

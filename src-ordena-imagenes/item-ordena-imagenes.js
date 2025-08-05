@@ -15,10 +15,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     let draggedItem = null;
     let correctOrder = [];
 
+    // Obtener la ruta del directorio actual y mostrarla
+    const path = window.location.pathname;
+    // La URL completa podría ser http://localhost:8000/src/index.html
+    // Con esto obtendrías "/src/"
+    const directoryPath = path.substring(0, path.lastIndexOf('/') + 1);
+
+    const workingDirectoryElement = document.getElementById('working-directory-path');
+    if (workingDirectoryElement) {
+        workingDirectoryElement.textContent = directoryPath;
+    }
+    console.log('Directorio de trabajo actual:', directoryPath);
+    
     // --- Función para cargar la configuración desde item-ordena-imagenes-config.json ---
     async function loadConfig() {
         try {
-            const response = await fetch('item-ordena-imagenes-config.json');
+            const response = await fetch('./item-ordena-imagenes-config.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

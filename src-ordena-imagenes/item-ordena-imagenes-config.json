@@ -17,14 +17,14 @@
       "../img-ordena-imagenes/caja_de_carton_abierta.png"
     ],
     "size4": [
-      "https://upload.wikimedia.org/wikipedia/commons/c/c1/Treasurchest.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/c/c8/Shopping_cart_with_food_clip_art_2.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/9/9e/Motorbike.svg"
+      "../img-ordena-imagenes/sillon_rojo.png",
+      "../img-ordena-imagenes/motocicleta_roja.png",
+      "../img-ordena-imagenes/carro_supermercado.png"
     ],
     "size5": [
-      "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nissan_Patrol.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/e/ea/Citro%C3%ABn_C1.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/6/6a/Dump-truck.svg"
+      "../img-ordena-imagenes/grua_horquilla.png",
+      "../img-ordena-imagenes/combi_verde.png",
+      "../img-ordena-imagenes/auto_deportivo_azul.png"
     ]
   }
 }

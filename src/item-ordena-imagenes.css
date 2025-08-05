@@ -42,12 +42,13 @@ h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 
     /* --- ESTA ES LA CLAVE PARA EL DISEÑO DINÁMICO --- */
-    flex: 1 1 150px; /* flex-grow, flex-shrink, flex-basis */
+    flex: 0 1 150px; /* flex-grow, flex-shrink, flex-basis */
     /* Significa:
-       - flex-grow: 1 (pueden crecer para llenar espacio)
+       - flex-grow: 0 (no pueden crecer para llenar espacio)
        - flex-shrink: 1 (pueden encogerse si no hay espacio)
        - flex-basis: 150px (su ancho ideal es 150px)
     */
+    max-width: 150px; /* Limita el ancho máximo a 150px */
 }
 
 .draggable:active {

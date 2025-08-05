@@ -2,14 +2,14 @@
   "numberOfImagesToOrder": 5,
   "imageGroups": {
     "size1": [
-      "../img-ordena-imagenes/pencil_end_pencil_with.png",
-      "../img-ordena-imagenes/scissors_shears_pair_scissors.png",
-      "../img-ordena-imagenes/bulb_light_lamp_electric.png"
+      "../img-ordena-imagenes/lapiz_con_goma.png",
+      "../img-ordena-imagenes/tijeras.png",
+      "../img-ordena-imagenes/ampolleta.png"
     ],
     "size2": [
-      "https://upload.wikimedia.org/wikipedia/commons/6/6a/Basketball.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/6/68/Books-aj.svg_aj_ashton_01c.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/d/d3/Soccerball.svg"
+      "../img-ordena-imagenes/pelota_basquetbol.png",
+      "../img-ordena-imagenes/libro.png",
+      "../img-ordena-imagenes/pelota_futbol.png"
     ],
     "size3": [
       "https://upload.wikimedia.org/wikipedia/commons/5/5b/Compact_stereo.svg",

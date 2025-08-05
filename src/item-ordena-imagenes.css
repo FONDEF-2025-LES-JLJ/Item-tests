@@ -20,7 +20,7 @@ h1 {
 
 #image-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Para mantener todos los elementos en una sola fila */
     gap: 20px;
     border: 2px dashed #ccc;
     padding: 20px;
@@ -29,23 +29,25 @@ h1 {
     max-width: 900px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: center;
+    justify-content: center; /* Centrar las imágenes si no hay suficientes para llenar la fila */
     align-items: center;
 }
 
 .draggable {
-    /* Base para tamaño uniforme: 150px x 150px */
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* ¡Esto es clave para recortar y llenar el espacio! */
-    flex-shrink: 0;    /* Evita que se encojan en la fila si el espacio es limitado */
-    flex-grow: 0;      /* Evita que crezcan si hay espacio extra */
-    flex-basis: 150px; /* Tamaño base para la distribución Flexbox */
-
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
     cursor: grab;
     border: 2px solid transparent;
     transition: border 0.2s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* --- ESTA ES LA CLAVE PARA EL DISEÑO DINÁMICO --- */
+    flex: 1 1 150px; /* flex-grow, flex-shrink, flex-basis */
+    /* Significa:
+       - flex-grow: 1 (pueden crecer para llenar espacio)
+       - flex-shrink: 1 (pueden encogerse si no hay espacio)
+       - flex-basis: 150px (su ancho ideal es 150px)
+    */
 }
 
 .draggable:active {
@@ -117,16 +119,13 @@ button:hover {
 /* Para pantallas medianas (tabletas y algunos portátiles) */
 @media (max-width: 992px) {
     #image-container {
-        width: 90%;
         gap: 15px;
-        padding: 15px;
     }
     .draggable {
-        /* Para 3 imágenes por fila, manteniendo el aspecto cuadrado */
-        width: calc(33.33% - 10px); /* Ajusta el ancho para 3 columnas y el gap de 15px */
-        height: unset; /* Resetea el alto fijo */
-        aspect-ratio: 1 / 1; /* Mantiene la relación de aspecto cuadrada */
-        flex-basis: unset; /* Reinicia flex-basis para que se ajuste al width calc() */
+    }
+    button {
+        padding: 9px 18px;
+        font-size: 1.05em;
     }
 }
 
@@ -141,11 +140,6 @@ button:hover {
         padding: 10px;
     }
     .draggable {
-        /* Para 2 imágenes por fila, manteniendo el aspecto cuadrado */
-        width: calc(50% - 5px); /* Ajusta el ancho para 2 columnas y el gap de 10px */
-        height: unset;
-        aspect-ratio: 1 / 1;
-        flex-basis: unset;
     }
     button {
         padding: 8px 15px;
@@ -159,16 +153,14 @@ button:hover {
         font-size: 1.3em;
     }
     #image-container {
+        width: 90%;
         padding: 8px;
         gap: 8px;
     }
     .draggable {
-        /* Para 1 imagen por fila, ocupando el ancho completo, pero con un max-width */
-        width: 100%;
-        max-width: 200px; /* Limita el tamaño máximo si el 100% es demasiado grande */
-        height: unset;
-        aspect-ratio: 1 / 1;
-        margin: 0 auto; /* Centra la imagen si tiene un max-width y no ocupa el 100% */
-        flex-basis: unset;
+    }
+    button {
+        padding: 6px 12px;
+        font-size: 0.9em;
     }
 }

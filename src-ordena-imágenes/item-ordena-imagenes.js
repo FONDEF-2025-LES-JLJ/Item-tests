@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return await response.json();
         } catch (error) {
             console.error('Error al cargar la configuración:', error);
-            messageDisplay.textContent = 'Error al cargar la configuración del juego.';
+            messageDisplay.textContent = 'Error al cargar la configuración del ítem.';
             messageDisplay.className = 'incorrect';
             return null;
         }

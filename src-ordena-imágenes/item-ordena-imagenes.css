@@ -34,7 +34,7 @@ h1 {
 }
 
 .draggable {
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 1 / 1;
     cursor: grab;
     border: 2px solid transparent;

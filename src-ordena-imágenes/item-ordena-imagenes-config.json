@@ -2,9 +2,9 @@
   "numberOfImagesToOrder": 5,
   "imageGroups": {
     "size1": [
-      "https://upload.wikimedia.org/wikipedia/commons/b/ba/Pencil_clipart.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/0/08/Orange-scissors.svg",
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Light_bulb_icon.svg/103px-Light_bulb_icon.svg.png"
+      "img-ordena-imágenes/pencil_end_pencil_with.png",
+      "img-ordena-imágenes/scissors_shears_pair_scissors.png",
+      "img-ordena-imágenes/bulb_light_lamp_electric.png"
     ],
     "size2": [
       "https://upload.wikimedia.org/wikipedia/commons/6/6a/Basketball.svg",

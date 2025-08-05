@@ -1,0 +1,50 @@
+{
+    "titulo": "Saca al intruso del diagrama de Venn",
+    "instrucciones": "Arrastra las imágenes que no pertenecen al mismo conjunto fuera del diagrama de Venn. ¡Tú puedes!",
+    "textoBotonPrincipal": "Verificar",
+    "textoBotonHome": "Volver al home",
+    "numeroImagenesComunes": 3,
+    "numeroImagenesIntrusas": 1,
+    "estiloVenn": {
+        "colorFondo": "rgba(255, 255, 255, 0.4)",
+        "colorLinea": "#007bff"
+    },
+    "conjuntosDeImagenes": [
+        {
+            "nombre": "animales",
+            "imagenes": [
+                "animal-1.jpg",
+                "animal-2.jpg",
+                "animal-3.jpg",
+                "animal-4.jpg"
+            ]
+        },
+        {
+            "nombre": "frutas",
+            "imagenes": [
+                "fruta-1.jpg",
+                "fruta-2.jpg",
+                "fruta-3.jpg",
+                "fruta-4.jpg"
+            ]
+        },
+        {
+            "nombre": "herramientas",
+            "imagenes": [
+                "herramienta-1.jpg",
+                "herramienta-2.jpg",
+                "herramienta-3.jpg",
+                "herramienta-4.jpg"
+            ]
+        },
+        {
+            "nombre": "vehiculos",
+            "imagenes": [
+                "vehiculo-1.jpg",
+                "vehiculo-2.jpg",
+                "vehiculo-3.jpg",
+                "vehiculo-4.jpg"
+            ]
+        }
+    ]
+}

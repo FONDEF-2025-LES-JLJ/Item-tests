@@ -1,0 +1,132 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Estilos del Diagrama de Venn y su contenedor */
+#diagrama-venn-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción para todos los dispositivos */
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#diagrama-venn {
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--venn-line-color),
+                inset 0 0 0 2px var(--venn-line-color);
+    background-color: var(--venn-background-color);
+}
+
+/* Estilos de las imágenes */
+#imagenes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen {
+    width: calc(25% - 15px);
+    aspect-ratio: 1 / 1;
+    cursor: grab;
+    object-fit: contain;
+    border: 2px solid transparent;
+    transition: border 0.2s ease-in-out;
+}
+
+.imagen.arrastrando {
+    opacity: 0.5;
+}
+
+/* Estilos del botón */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del botón "Volver al home" */
+#home-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+#home-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    #home-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen {
+        width: calc(33.33% - 10px);
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}

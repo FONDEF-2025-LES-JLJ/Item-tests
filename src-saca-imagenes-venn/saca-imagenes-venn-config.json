@@ -1,12 +1,12 @@
 {
     "titulo": "Reconocer elementos distintos",
     "instrucciones": "Arrastra las imágenes que no pertenecen al mismo conjunto fuera del diagrama de Venn.",
-    "textoBotonPrincipal": "Enviar respuesta",
+    "textoBotonRespuesta": "Enviar respuesta",
     "textoBotonHome": "Volver al home",
-    "numeroImagenesComunes": 3,
+    "numeroImagenesComunes": 4,
     "numeroImagenesIntrusas": 1,
     "estiloVenn": {
-        "colorFondo": "rgba(255, 255, 255, 0.4)",
+        "colorFondo": "#BEDBFF",
         "colorLinea": "#007bff"
     },
     "conjuntosDeImagenes": [

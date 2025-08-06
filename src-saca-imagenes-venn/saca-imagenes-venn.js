@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const configPath = './saca-imagenes-venn-config.json';
-    const imagenesContainer = document.getElementById('imagenes-container');
-    const diagramaVenn = document.getElementById('diagrama-venn');
-    const botonPrincipal = document.getElementById('boton-principal');
+    const diagramaVenn = document.getElementById('venn-container');
+    const botonResponder = document.getElementById('boton-responder');
     const homeButton = document.getElementById('home-button');
     const imagenDirectorio = '../img-saca-imagenes-venn/';
 
@@ -36,9 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch(configPath);
             const config = await response.json();
 
-            document.getElementById('game-title').textContent = config.titulo;
-            document.getElementById('game-instructions').textContent = config.instrucciones;
-            botonPrincipal.textContent = config.textoBotonPrincipal;
+            document.getElementById('item-title').textContent = config.titulo;
+            document.getElementById('item-instructions').textContent = config.instrucciones;
+            botonResponder.textContent = config.textoBotonResponder;
             homeButton.textContent = config.textoBotonHome;
 
             // Configurar los colores del diagrama de Venn
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Seleccionar un conjunto de imágenes "comunes"
             const conjuntoComun = getRandomItem(config.conjuntosDeImagenes);
-            console.log('Conjunto escogido:', conjuntoComun);
 
             // Seleccionar las imágenes "correctas" (n)
             imagenesCorrectas = getRandomItems(conjuntoComun.imagenes, config.numeroImagenesComunes);
@@ -72,14 +70,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para renderizar las imágenes
     const renderizarImagenes = (imagenes) => {
-        imagenesContainer.innerHTML = '';
+        diagramaVenn.innerHTML = '';
+
+        // Obtener las dimensiones del contenedor para no desbordar
+        const containerRect = diagramaVenn.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+        const imagenWidth = Math.round(containerWidth * 0.15); /* según CSS */
+        const imagenHeight = Math.round(containerHeight * 0.15); /* según CSS */
+
         imagenes.forEach(img => {
             const imgElement = document.createElement('img');
             imgElement.src = `${imagenDirectorio}${img}`;
             imgElement.className = 'imagen';
             imgElement.setAttribute('draggable', 'true');
             imgElement.dataset.nombre = img;
-            imagenesContainer.appendChild(imgElement);
+
+        
+            // Calcular y asignar posiciones aleatorias
+            const randomTop = Math.random() * (containerHeight - imagenHeight);
+            const randomLeft = Math.random() * (containerWidth - imagenWidth);
+
+            imgElement.style.top = `${randomTop}px`;
+            imgElement.style.left = `${randomLeft}px`;
+        
+            diagramaVenn.appendChild(imgElement);
         });
     };
 
@@ -99,14 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Eventos en el contenedor de imágenes (diagrama de Venn)
-        imagenesContainer.addEventListener('dragover', (e) => {
+        diagramaVenn.addEventListener('dragover', (e) => {
             e.preventDefault();
         });
 
-        imagenesContainer.addEventListener('drop', (e) => {
+        diagramaVenn.addEventListener('drop', (e) => {
             e.preventDefault();
-            if (draggedElement && !imagenesContainer.contains(draggedElement)) {
-                imagenesContainer.appendChild(draggedElement);
+            if (draggedElement && !diagramaVenn.contains(draggedElement)) {
+                diagramaVenn.appendChild(draggedElement);
             }
         });
 
@@ -116,9 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.body.addEventListener('drop', (e) => {
-            if (e.target.id !== 'imagenes-container' && draggedElement) {
-            /* if (draggedElement && e.target !== imagenesContainer && !imagenesContainer.contains(e.target))*/
-                // La imagen se soltó fuera del diagrama de Venn
+            if (draggedElement && !document.body.contains(draggedElement)) {
                 document.body.appendChild(draggedElement);
             }
         });
@@ -126,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para verificar la respuesta del usuario
     const verificarRespuesta = () => {
-        const imagenesEnVenn = Array.from(imagenesContainer.querySelectorAll('.imagen')).map(img => img.dataset.nombre);
+        const imagenesEnVenn = Array.from(diagramaVenn.querySelectorAll('.imagen')).map(img => img.dataset.nombre);
 
         const intrusasIdentificadas = imagenesEnVenn.filter(img => imagenesIntrusas.includes(img));
         
@@ -139,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    botonPrincipal.addEventListener('click', verificarRespuesta);
+    botonResponder.addEventListener('click', verificarRespuesta);
 
     // Cargar el juego al inicio
     cargarConfiguracion();

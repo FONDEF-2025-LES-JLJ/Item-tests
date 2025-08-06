@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
 }
 
-.game-container {
+.item-container {
     text-align: center;
     width: 90%;
     max-width: 900px;
@@ -27,42 +27,21 @@ p {
     margin-bottom: 30px;
 }
 
-/* Estilos del Diagrama de Venn y su contenedor */
-#diagrama-venn-container {
+/* Estilos del Diagrama de Venn */
+#venn-container {
     position: relative;
-    width: 50%;
-    aspect-ratio: 16 / 9; Mantiene la proporción para todos los dispositivos*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción para todos los dispositivos*/
     border: 2px solid var(--venn-line-color);
     background-color: var(--venn-background-color);
-}
-
-#diagrama-venn {
-    /*position: absolute;*
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--venn-line-color),
-                inset 0 0 0 2px var(--venn-line-color);
-    background-color: var(--venn-background-color);
-    */
-    display: none;
-}
-
-/* Estilos de las imágenes */
-#imagenes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     padding: 10px;
 }
 
+/* Estilos de las imágenes */
 .imagen {
-    flex: 0 1 30px;
+    position: absolute;
+    width: 15%;
     aspect-ratio: 1 / 1;
     max-width: 40px;
     height: auto;
@@ -74,6 +53,7 @@ p {
 
 .imagen.arrastrando {
     opacity: 0.5;
+    transform: scale(1.1);
 }
 
 /* Estilos del botón */

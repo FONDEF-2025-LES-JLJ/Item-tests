@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const diagramaVenn = document.getElementById('diagrama-venn');
     const botonPrincipal = document.getElementById('boton-principal');
     const homeButton = document.getElementById('home-button');
-    const imagenDirectorio = './img-saca-imagenes-venn/';
+    const imagenDirectorio = '../img-saca-imagenes-venn/';
 
     let imagenesCorrectas = [];
     let imagenesIntrusas = [];

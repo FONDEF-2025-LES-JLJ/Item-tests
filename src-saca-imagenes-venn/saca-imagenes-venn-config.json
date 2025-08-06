@@ -13,37 +13,55 @@
         {
             "nombre": "animales",
             "imagenes": [
-                "animal-1.jpg",
-                "animal-2.jpg",
-                "animal-3.jpg",
-                "animal-4.jpg"
+                "../img-saca-imagenes-venn/animales_cocodrilo.png",
+                "../img-saca-imagenes-venn/animales_elefante.png",
+                "../img-saca-imagenes-venn/animales_girafa.png",
+                "../img-saca-imagenes-venn/animales_leon.png",
+                "../img-saca-imagenes-venn/animales_mono.png"
             ]
         },
         {
             "nombre": "frutas",
             "imagenes": [
-                "fruta-1.jpg",
-                "fruta-2.jpg",
-                "fruta-3.jpg",
-                "fruta-4.jpg"
+                "../img-saca-imagenes-venn/frutas_cereza.png",
+                "../img-saca-imagenes-venn/frutas_frutilla.png",
+                "../img-saca-imagenes-venn/frutas_granada.png",
+                "../img-saca-imagenes-venn/frutas_kiwi.png",
+                "../img-saca-imagenes-venn/frutas_naranja.png",
+                "../img-saca-imagenes-venn/frutas_manzana_roja.png",
+                "../img-saca-imagenes-venn/frutas_platana.png"
             ]
         },
         {
             "nombre": "herramientas",
             "imagenes": [
-                "herramienta-1.jpg",
-                "herramienta-2.jpg",
-                "herramienta-3.jpg",
-                "herramienta-4.jpg"
+                "../img-saca-imagenes-venn/herramientas_atornillador.png",
+                "../img-saca-imagenes-venn/herramientas_alicates.png",
+                "../img-saca-imagenes-venn/herramientas_combo.png",
+                "../img-saca-imagenes-venn/herramientas_llave_fija.png",
+                "../img-saca-imagenes-venn/herramientas_martillo.png"
             ]
         },
         {
-            "nombre": "vehiculos",
+            "nombre": "juguetes",
             "imagenes": [
-                "vehiculo-1.jpg",
-                "vehiculo-2.jpg",
-                "vehiculo-3.jpg",
-                "vehiculo-4.jpg"
+                "../img-saca-imagenes-venn/juguetes_camion_tolva.png",
+                "../img-saca-imagenes-venn/juguetes_carro_bomba.png",
+                "../img-saca-imagenes-venn/juguetes_bus.png",
+                "../img-saca-imagenes-venn/juguetes_camion_container.png",
+                "../img-saca-imagenes-venn/juguetes_camion_combustible.png",
+                "../img-saca-imagenes-venn/juguetes_camion_madera.png"
+            ]
+        },
+        {
+            "nombre": "insectos",
+            "imagenes": [
+                "../img-saca-imagenes-venn/insectos_abeja.png",
+                "../img-saca-imagenes-venn/insectos_chinita.png",
+                "../img-saca-imagenes-venn/insectos_escarabajo.png",
+                "../img-saca-imagenes-venn/insectos_hormiga.png",
+                "../img-saca-imagenes-venn/insectos_mariposa.png",
+                "../img-saca-imagenes-venn/insectos_mosca.png"
             ]
         }
     ]

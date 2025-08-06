@@ -30,10 +30,12 @@ p {
 /* Estilos del Diagrama de Venn */
 #venn-container {
     position: relative;
-    width: 60%;
+    width: var(--venn-width-as-pct); /* se configura */
     aspect-ratio: 16 / 9; /* Mantiene la proporción para todos los dispositivos*/
-    border: 2px solid var(--venn-line-color);
-    background-color: var(--venn-background-color);
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid var(--venn-line-color); /* se configura */
+    background-color: var(--venn-background-color); /* se configura */
     gap: 15px;
     padding: 10px;
 }
@@ -41,7 +43,7 @@ p {
 /* Estilos de las imágenes */
 .imagen {
     position: absolute;
-    width: 15%;
+    /*width: 15%; se configura */
     aspect-ratio: 1 / 1;
     max-width: 40px;
     height: auto;

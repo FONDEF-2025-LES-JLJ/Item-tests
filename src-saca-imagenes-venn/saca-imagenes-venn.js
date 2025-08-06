@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonResponder = document.getElementById('boton-responder');
     const homeButton = document.getElementById('home-button');
     const imagenDirectorio = '../img-saca-imagenes-venn/';
+    const config = {};
 
     let imagenesCorrectas = [];
     let imagenesIntrusas = [];
@@ -32,15 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para cargar la configuración del juego
     const cargarConfiguracion = async () => {
         try {
+            // Carga el archivo JSON de configuración
             const response = await fetch(configPath);
-            const config = await response.json();
+            config = await response.json();
 
+            // Setea  el título e instrucciones del ítem
             document.getElementById('item-title').textContent = config.titulo;
             document.getElementById('item-instructions').textContent = config.instrucciones;
+
+            // Setea el texto de los botones
             botonResponder.textContent = config.textoBotonResponder;
             homeButton.textContent = config.textoBotonHome;
 
-            // Configurar los colores del diagrama de Venn
+            // Configura el diagrama de Venn
+            document.documentElement.style.setProperty('--venn-width-as-pct', config.tamanoDiagramaVennEnPorciento);
             document.documentElement.style.setProperty('--venn-line-color', config.estiloVenn.colorLinea);
             document.documentElement.style.setProperty('--venn-background-color', config.estiloVenn.colorFondo);
 
@@ -67,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error al cargar la configuración:', error);
         }
     };
-
+    
     // Función para renderizar las imágenes
     const renderizarImagenes = (imagenes) => {
         diagramaVenn.innerHTML = '';
@@ -76,9 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const containerRect = diagramaVenn.getBoundingClientRect();
         const containerWidth = containerRect.width;
         const containerHeight = containerRect.height;
-        const imagenWidth = Math.round(containerWidth * 0.15); /* según CSS */
-        const imagenHeight = Math.round(containerHeight * 0.15); /* según CSS */
-
+        const imagenWidthPct = `${config.tamanoImagenElementoEnPorciento}%`; 
+        const imagenWidth = Math.round(containerWidth * imagenWidthPct / 100);
+        const imagenHeight = Math.round(containerHeight * imagenWidthPct / 100);
+        
         imagenes.forEach(img => {
             const imgElement = document.createElement('img');
             imgElement.src = `${imagenDirectorio}${img}`;

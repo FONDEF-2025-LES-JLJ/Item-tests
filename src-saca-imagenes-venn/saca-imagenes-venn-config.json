@@ -5,6 +5,8 @@
     "textoBotonHome": "Volver al home",
     "numeroImagenesComunes": 4,
     "numeroImagenesIntrusas": 1,
+    "tamanoDiagramaVennEnPorciento": 60,
+    "tamanoImagenElementoEnPorciento": 20,
     "estiloVenn": {
         "colorFondo": "#BEDBFF",
         "colorLinea": "#007bff"

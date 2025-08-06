@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+  var homeButton = document.getElementById('home-button');
+  if (homeButton) {
+    homeButton.onclick = function() {
+      window.location.href = '../index.html';
+    };
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const configPath = './saca-imagenes-venn-config.json';
     const imagenesContainer = document.getElementById('imagenes-container');
@@ -108,7 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.body.addEventListener('drop', (e) => {
             if (e.target.id !== 'imagenes-container' && draggedElement) {
+            /* if (draggedElement && e.target !== imagenesContainer && !imagenesContainer.contains(e.target))*/
                 // La imagen se soltó fuera del diagrama de Venn
+                document.body.appendChild(draggedElement);
             }
         });
     };
@@ -116,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Función para verificar la respuesta del usuario
     const verificarRespuesta = () => {
         const imagenesEnVenn = Array.from(imagenesContainer.querySelectorAll('.imagen')).map(img => img.dataset.nombre);
-        
+
         const intrusasIdentificadas = imagenesEnVenn.filter(img => imagenesIntrusas.includes(img));
         
         const intrusasRestantes = imagenesIntrusas.filter(img => imagenesEnVenn.includes(img));

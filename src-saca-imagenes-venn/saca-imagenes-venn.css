@@ -29,18 +29,18 @@ p {
 
 /* Estilos del Diagrama de Venn y su contenedor */
 #diagrama-venn-container {
-    position: relative;
+    /*position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mantiene la proporción para todos los dispositivos */
+    aspect-ratio: 16 / 9; Mantiene la proporción para todos los dispositivos*/
     border: 2px dashed #ccc;
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
 }
 
 #diagrama-venn {
-    position: absolute;
-    width: 60%;
+    position: relative;/*absolute;*/
+    width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     box-shadow: 0 0 0 2px var(--venn-line-color),
@@ -55,13 +55,14 @@ p {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
 }
 
 .imagen {
-    width: calc(25% - 15px);
+    flex: 0 1 30px;
     aspect-ratio: 1 / 1;
+    max-width: 40px;
+    height: auto;
     cursor: grab;
     object-fit: contain;
     border: 2px solid transparent;

@@ -13,11 +13,11 @@
         {
             "nombre": "animales",
             "imagenes": [
-                "img-saca-imagenes-venn/animales_cocodrilo.png",
-                "img-saca-imagenes-venn/animales_elefante.png",
-                "img-saca-imagenes-venn/animales_girafa.png",
-                "img-saca-imagenes-venn/animales_leon.png",
-                "img-saca-imagenes-venn/animales_mono.png"
+                "animales_cocodrilo.png",
+                "animales_elefante.png",
+                "animales_girafa.png",
+                "animales_leon.png",
+                "animales_mono.png"
             ]
         },
         {

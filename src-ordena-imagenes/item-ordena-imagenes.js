@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (workingDirectoryElement) {
         workingDirectoryElement.textContent = directoryPath;
     }
-    console.log('Directorio de trabajo actual:', directoryPath);
     
     // --- Función para cargar la configuración desde item-ordena-imagenes-config.json ---
     async function loadConfig() {

@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Seleccionar un conjunto de imágenes "comunes"
             const conjuntoComun = getRandomItem(config.conjuntosDeImagenes);
-            
+            console.log('Conjunto escogido:', conjuntoComun);
+
             // Seleccionar las imágenes "correctas" (n)
             imagenesCorrectas = getRandomItems(conjuntoComun.imagenes, config.numeroImagenesComunes);
             

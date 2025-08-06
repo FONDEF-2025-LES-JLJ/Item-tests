@@ -23,45 +23,45 @@
         {
             "nombre": "frutas",
             "imagenes": [
-                "../img-saca-imagenes-venn/frutas_cereza.png",
-                "../img-saca-imagenes-venn/frutas_frutilla.png",
-                "../img-saca-imagenes-venn/frutas_granada.png",
-                "../img-saca-imagenes-venn/frutas_kiwi.png",
-                "../img-saca-imagenes-venn/frutas_naranja.png",
-                "../img-saca-imagenes-venn/frutas_manzana_roja.png",
-                "../img-saca-imagenes-venn/frutas_platana.png"
+                "frutas_cereza.png",
+                "frutas_frutilla.png",
+                "frutas_granada.png",
+                "frutas_kiwi.png",
+                "frutas_naranja.png",
+                "frutas_manzana_roja.png",
+                "frutas_platana.png"
             ]
         },
         {
             "nombre": "herramientas",
             "imagenes": [
-                "../img-saca-imagenes-venn/herramientas_atornillador.png",
-                "../img-saca-imagenes-venn/herramientas_alicates.png",
-                "../img-saca-imagenes-venn/herramientas_combo.png",
-                "../img-saca-imagenes-venn/herramientas_llave_fija.png",
-                "../img-saca-imagenes-venn/herramientas_martillo.png"
+                "herramientas_atornillador.png",
+                "herramientas_alicates.png",
+                "herramientas_combo.png",
+                "herramientas_llave_fija.png",
+                "herramientas_martillo.png"
             ]
         },
         {
             "nombre": "juguetes",
             "imagenes": [
-                "../img-saca-imagenes-venn/juguetes_camion_tolva.png",
-                "../img-saca-imagenes-venn/juguetes_carro_bomba.png",
-                "../img-saca-imagenes-venn/juguetes_bus.png",
-                "../img-saca-imagenes-venn/juguetes_camion_container.png",
-                "../img-saca-imagenes-venn/juguetes_camion_combustible.png",
-                "../img-saca-imagenes-venn/juguetes_camion_madera.png"
+                "juguetes_camion_tolva.png",
+                "juguetes_carro_bomba.png",
+                "juguetes_bus.png",
+                "juguetes_camion_container.png",
+                "juguetes_camion_combustible.png",
+                "juguetes_camion_madera.png"
             ]
         },
         {
             "nombre": "insectos",
             "imagenes": [
-                "../img-saca-imagenes-venn/insectos_abeja.png",
-                "../img-saca-imagenes-venn/insectos_chinita.png",
-                "../img-saca-imagenes-venn/insectos_escarabajo.png",
-                "../img-saca-imagenes-venn/insectos_hormiga.png",
-                "../img-saca-imagenes-venn/insectos_mariposa.png",
-                "../img-saca-imagenes-venn/insectos_mosca.png"
+                "insectos_abeja.png",
+                "insectos_chinita.png",
+                "insectos_escarabajo.png",
+                "insectos_hormiga.png",
+                "insectos_mariposa.png",
+                "insectos_mosca.png"
             ]
         }
     ]

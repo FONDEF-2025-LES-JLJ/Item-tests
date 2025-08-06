@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonResponder = document.getElementById('boton-responder');
     const homeButton = document.getElementById('home-button');
     const imagenDirectorio = '../img-saca-imagenes-venn/';
-    const config = {};
 
+    let config = {};
     let imagenesCorrectas = [];
     let imagenesIntrusas = [];
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error al cargar la configuración:', error);
         }
     };
-    
+
     // Función para renderizar las imágenes
     const renderizarImagenes = (imagenes) => {
         diagramaVenn.innerHTML = '';

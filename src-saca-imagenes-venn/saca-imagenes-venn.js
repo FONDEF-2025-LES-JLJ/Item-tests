@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             homeButton.textContent = config.textoBotonHome;
 
             // Configura el diagrama de Venn
-            document.documentElement.style.setProperty('--venn-width-as-pct', config.tamanoDiagramaVennEnPorciento);
+            document.documentElement.style.setProperty('--venn-width-as-pct', `${config.tamanoDiagramaVennEnPorciento}%`);
             document.documentElement.style.setProperty('--venn-line-color', config.estiloVenn.colorLinea);
             document.documentElement.style.setProperty('--venn-background-color', config.estiloVenn.colorFondo);
 

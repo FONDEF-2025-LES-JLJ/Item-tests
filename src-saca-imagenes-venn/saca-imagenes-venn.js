@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Calcular y asignar posiciones aleatorias
             const randomTop = Math.random() * (containerHeight - imagenHeight);
             const randomLeft = Math.random() * (containerWidth - imagenWidth);
-            console.log(`Imagen position: (${imagenWidth}px, ${imagenHeight}px)`);
+            console.log(`Imagen: ${img}`);
+            console.log(`Imagen position: (${randomTop}px, ${randomLeft}px)`);
 
             imgElement.style.top = `${randomTop}px`;
             imgElement.style.left = `${randomLeft}px`;

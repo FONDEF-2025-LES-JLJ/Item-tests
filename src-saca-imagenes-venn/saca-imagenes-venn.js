@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const imagenWidthPct = config.tamanoImagenElementoEnPorciento; 
         const imagenWidth = Math.round(containerWidth * imagenWidthPct / 100);
         const imagenHeight = Math.round(containerHeight * imagenWidthPct / 100);
-        console.log(`Venn Width: ${containerWidth}px, Venn Height: ${containerHeight}px`);
-        console.log(`Imagen Width as pct: ${imagenWidthPct}`);
-        console.log(`Imagen Width: ${imagenWidth}px, Imagen Height: ${imagenHeight}px`);
+        // console.log(`Venn Width: ${containerWidth}px, Venn Height: ${containerHeight}px`);
+        // console.log(`Imagen Width as pct: ${imagenWidthPct}`);
+        // console.log(`Imagen Width: ${imagenWidth}px, Imagen Height: ${imagenHeight}px`);
 
         imagenes.forEach(img => {
             const imgElement = document.createElement('img');

@@ -45,7 +45,7 @@ p {
     position: absolute;
     /*width: 15%; se configura */
     aspect-ratio: 1 / 1;
-    max-width: 40px;
+    max-width: 100px;
     height: auto;
     cursor: grab;
     object-fit: contain;

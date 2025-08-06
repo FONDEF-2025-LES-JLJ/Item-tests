@@ -85,18 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const imagenWidthPct = `${config.tamanoImagenElementoEnPorciento}%`; 
         const imagenWidth = Math.round(containerWidth * imagenWidthPct / 100);
         const imagenHeight = Math.round(containerHeight * imagenWidthPct / 100);
-        
+        console.log(`Venn Width: ${containerWidth}px, Venn Height: ${containerHeight}px`);
+        console.log(`Imagen Width as pct: ${imagenWidthPct}`);
+        console.log(`Imagen Width: ${imagenWidth}px, Imagen Height: ${imagenHeight}px`);
+
         imagenes.forEach(img => {
             const imgElement = document.createElement('img');
             imgElement.src = `${imagenDirectorio}${img}`;
             imgElement.className = 'imagen';
             imgElement.setAttribute('draggable', 'true');
             imgElement.dataset.nombre = img;
-
         
             // Calcular y asignar posiciones aleatorias
             const randomTop = Math.random() * (containerHeight - imagenHeight);
             const randomLeft = Math.random() * (containerWidth - imagenWidth);
+            console.log(`Imagen position: (${imagenWidth}px, ${imagenHeight}px)`);
 
             imgElement.style.top = `${randomTop}px`;
             imgElement.style.left = `${randomLeft}px`;

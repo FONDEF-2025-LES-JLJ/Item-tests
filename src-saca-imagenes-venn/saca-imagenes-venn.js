@@ -84,10 +84,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const containerHeight = containerRect.height;
         const imagenWidthPct = config.tamanoImagenElementoEnPorciento; 
         const imagenWidth = Math.round(containerWidth * imagenWidthPct / 100);
-        const imagenHeight = Math.round(containerHeight * imagenWidthPct / 100);
         console.log(`Venn Width: ${containerWidth}px, Venn Height: ${containerHeight}px`);
         console.log(`Imagen Width as pct: ${imagenWidthPct}`);
-        console.log(`Imagen Width: ${imagenWidth}px, Imagen Height: ${imagenHeight}px`);
+        console.log(`Imagen Width: ${imagenWidth}px, Imagen Height: ${imagenWidth}px`);
 
         imagenes.forEach(img => {
             const imgElement = document.createElement('img');
@@ -97,11 +96,12 @@ document.addEventListener('DOMContentLoaded', () => {
             imgElement.dataset.nombre = img;
         
             // Calcular y asignar posiciones aleatorias
-            const randomTop = Math.random() * (containerHeight - imagenHeight);
+            const randomTop = Math.random() * (containerHeight - imagenWidth);
             const randomLeft = Math.random() * (containerWidth - imagenWidth);
             console.log(`Imagen: ${img}`);
             console.log(`Imagen position: (${randomTop}px, ${randomLeft}px)`);
 
+            imgElement.style.width = `${imagenWidth}px`;
             imgElement.style.top = `${randomTop}px`;
             imgElement.style.left = `${randomLeft}px`;
         

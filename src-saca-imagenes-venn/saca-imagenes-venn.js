@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const containerRect = diagramaVenn.getBoundingClientRect();
         const containerWidth = containerRect.width;
         const containerHeight = containerRect.height;
-        const imagenWidthPct = ${config.tamanoImagenElementoEnPorciento}; 
+        const imagenWidthPct = config.tamanoImagenElementoEnPorciento; 
         const imagenWidth = Math.round(containerWidth * imagenWidthPct / 100);
         const imagenHeight = Math.round(containerHeight * imagenWidthPct / 100);
         console.log(`Venn Width: ${containerWidth}px, Venn Height: ${containerHeight}px`);

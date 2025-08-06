@@ -1,7 +1,7 @@
 {
-    "titulo": "Saca al intruso del diagrama de Venn",
-    "instrucciones": "Arrastra las imágenes que no pertenecen al mismo conjunto fuera del diagrama de Venn. ¡Tú puedes!",
-    "textoBotonPrincipal": "Verificar",
+    "titulo": "Reconocer elementos distintos",
+    "instrucciones": "Arrastra las imágenes que no pertenecen al mismo conjunto fuera del diagrama de Venn.",
+    "textoBotonPrincipal": "Enviar respuesta",
     "textoBotonHome": "Volver al home",
     "numeroImagenesComunes": 3,
     "numeroImagenesIntrusas": 1,
@@ -13,11 +13,11 @@
         {
             "nombre": "animales",
             "imagenes": [
-                "../img-saca-imagenes-venn/animales_cocodrilo.png",
-                "../img-saca-imagenes-venn/animales_elefante.png",
-                "../img-saca-imagenes-venn/animales_girafa.png",
-                "../img-saca-imagenes-venn/animales_leon.png",
-                "../img-saca-imagenes-venn/animales_mono.png"
+                "img-saca-imagenes-venn/animales_cocodrilo.png",
+                "img-saca-imagenes-venn/animales_elefante.png",
+                "img-saca-imagenes-venn/animales_girafa.png",
+                "img-saca-imagenes-venn/animales_leon.png",
+                "img-saca-imagenes-venn/animales_mono.png"
             ]
         },
         {

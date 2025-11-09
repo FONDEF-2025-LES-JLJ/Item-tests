@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('item-instructions').textContent = config.instrucciones;
 
             // Setea el texto de los botones
-            botonResponder.textContent = config.textoBotonResponder;
+            botonResponder.textContent = config.textoBotonRespuesta;
             homeButton.textContent = config.textoBotonHome;
 
             // Configura el diagrama de Venn
